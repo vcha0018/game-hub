@@ -39,7 +39,7 @@ function App() {
           />
         </GridItem>
       </Show>
-      <GridItem area="main">
+      <GridItem area="main" paddingX={4}>
         <VStack spacing={4} align="stretch">
           <HStack spacing={4} marginBottom={4}>
             <PlatformSelector
