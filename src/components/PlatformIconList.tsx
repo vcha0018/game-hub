@@ -34,7 +34,7 @@ const PlatformIconList = ({ platforms }: Props) => {
       {platforms.map((platform) => (
         <Tooltip key={platform.id} label={platform.name} placement="bottom">
           <span>
-            <Icon as={iconMap[platform.slug]} color={"gray.500"} />
+            <Icon as={iconMap[platform.slug]} color={"gray.300"} />
           </span>
         </Tooltip>
       ))}
