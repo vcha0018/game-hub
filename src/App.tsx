@@ -1,4 +1,11 @@
-import { Grid, GridItem, HStack, Show, VStack } from "@chakra-ui/react";
+import {
+  Grid,
+  GridItem,
+  HStack,
+  Show,
+  VStack,
+  useColorMode,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import "./App.css";
 import GameGrid from "./components/GameGrid";
@@ -19,7 +26,7 @@ export interface GameQuery {
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-
+  const { colorMode } = useColorMode();
   return (
     <Grid
       templateAreas={{
@@ -30,36 +37,53 @@ function App() {
         base: "1fr",
         lg: "200px 1fr",
       }}>
-      <GridItem area="nav" paddingX={4}>
+      <GridItem
+        area="nav"
+        paddingX={4}
+        zIndex="99"
+        position="sticky"
+        backgroundColor={colorMode == "dark" ? "gray.800" : "white"}
+        top="0"
+        left="0">
         <NavBar
           onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
         />
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" paddingX={4}>
+        <GridItem area="aside" paddingX={4} zIndex="1">
           <GenreList
             selectedGenre={gameQuery.genre}
             onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
           />
         </GridItem>
       </Show>
-      <GridItem area="main" paddingX={4}>
+      <GridItem area="main" paddingX={4} zIndex="1">
         <VStack spacing={4} align="stretch">
-          <GameHeading gameQuery={gameQuery} />
-          <HStack spacing={4} marginBottom={4}>
-            <PlatformSelector
-              selectedPlatform={gameQuery.platform}
-              onSelectPlatform={(platform) =>
-                setGameQuery({ ...gameQuery, platform })
-              }
-            />
-            <SortSelector
-              sortOrder={gameQuery.sortOrder}
-              onSelectSortOrder={(sortOrder) =>
-                setGameQuery({ ...gameQuery, sortOrder })
-              }
-            />
-          </HStack>
+          <VStack
+            spacing={4}
+            align="stretch"
+            paddingY={2}
+            position="sticky"
+            backgroundColor={colorMode == "dark" ? "gray.800" : "white"}
+            top="20"
+            left="0"
+            zIndex="99">
+            <GameHeading gameQuery={gameQuery} />
+            <HStack spacing={4} marginBottom={4}>
+              <PlatformSelector
+                selectedPlatform={gameQuery.platform}
+                onSelectPlatform={(platform) =>
+                  setGameQuery({ ...gameQuery, platform })
+                }
+              />
+              <SortSelector
+                sortOrder={gameQuery.sortOrder}
+                onSelectSortOrder={(sortOrder) =>
+                  setGameQuery({ ...gameQuery, sortOrder })
+                }
+              />
+            </HStack>
+          </VStack>
           <GameGrid gameQuery={gameQuery} />
         </VStack>
       </GridItem>
