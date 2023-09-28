@@ -5,6 +5,7 @@ import {
   Image,
   List,
   ListItem,
+  useColorMode,
 } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
+  const { colorMode } = useColorMode();
   const { data, isLoading, error } = useGenres();
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -42,6 +44,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
                 variant="link"
                 whiteSpace="normal"
                 textAlign="left"
+                color={colorMode === "dark" ? "#fff" : "#000"}
                 fontSize="lg"
                 onClick={() => onSelectGenre(genre)}>
                 {genre.name}

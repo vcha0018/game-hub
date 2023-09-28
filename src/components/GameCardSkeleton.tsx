@@ -9,7 +9,7 @@ import {
 const GameCardSkeleton = () => {
   return (
     <Card>
-      <Skeleton height="200px" />
+      <Skeleton height="300px" />
       <CardBody>
         <SkeletonText noOfLines={2} skeletonHeight={2} />
         <HStack marginY={4} justifyContent="space-between">
