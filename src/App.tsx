@@ -50,7 +50,14 @@ function App() {
         />
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" paddingX={4} zIndex="1">
+        <GridItem
+          area="aside"
+          paddingX={4}
+          zIndex="1"
+          height="fit-content"
+          position="sticky"
+          top="6em"
+          left="0">
           <GenreList
             selectedGenre={gameQuery.genre}
             onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
@@ -63,11 +70,11 @@ function App() {
             spacing={4}
             align="stretch"
             paddingY={2}
-            position="sticky"
             backgroundColor={colorMode == "dark" ? "gray.800" : "white"}
-            top="20"
-            left="0"
-            zIndex="99">
+            zIndex="99"
+            position="sticky"
+            top="5.7rem"
+            left="0">
             <GameHeading gameQuery={gameQuery} />
             <HStack spacing={4} marginBottom={4}>
               <PlatformSelector
@@ -92,3 +99,4 @@ function App() {
 }
 
 export default App;
+
