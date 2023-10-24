@@ -11,8 +11,7 @@ const SearchInput = () => {
       onSubmit={(e) => {
         e.preventDefault();
         if (ref.current) setSearchText(ref.current.value);
-      }}
-      className="w-full">
+      }}>
       <InputGroup>
         <InputLeftElement children={<BsSearch />} />
         <Input
