@@ -43,7 +43,7 @@ const HomePage = () => {
             <VStack
               spacing={4}
               align="stretch"
-              paddingY={2}
+              padding={2}
               backgroundColor={colorMode == "dark" ? "gray.800" : "white"}
               zIndex="99"
               position="sticky"

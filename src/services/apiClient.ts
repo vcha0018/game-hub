@@ -25,5 +25,11 @@ export default class APIClient<T> {
       .get<FetchResponse<T>>(this.endpoint, config)
       .then((res) => res.data);
   };
-}
 
+  get = (slug: number | string) => {
+    console.log("called");
+    return axiosClient
+      .get<T>(this.endpoint + "/" + slug)
+      .then((res) => res.data);
+  };
+}
