@@ -27,7 +27,6 @@ export default class APIClient<T> {
   };
 
   get = (slug: number | string) => {
-    console.log("called");
     return axiosClient
       .get<T>(this.endpoint + "/" + slug)
       .then((res) => res.data);
