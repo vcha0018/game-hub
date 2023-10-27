@@ -1,5 +1,5 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
-import { Game } from "../entities/Game";
+import Game from "../entities/Game";
 import CriticScore from "./CriticScore";
 import DefinationItem from "./DefinationItem";
 
@@ -36,3 +36,4 @@ const GameAttributes = ({ game }: Props) => {
 };
 
 export default GameAttributes;
+
