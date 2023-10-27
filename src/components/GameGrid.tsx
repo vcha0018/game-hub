@@ -13,6 +13,8 @@ const GameGrid = () => {
   const fetchGamesCount =
     data?.pages.reduce((total, page) => total + page.results.length, 0) || 0;
 
+  //if (fetchGamesCount === 0) return <Text>No game found!</Text>;
+
   if (error) return <Text>{error.message}</Text>;
 
   return (
@@ -22,7 +24,8 @@ const GameGrid = () => {
         dataLength={fetchGamesCount}
         next={fetchNextPage}
         hasMore={!!hasNextPage}
-        loader={<Spinner />}>
+        loader={<Spinner />}
+        endMessage="No more games to display!">
         <SimpleGrid
           columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
           spacing={6}

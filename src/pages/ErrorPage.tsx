@@ -4,6 +4,8 @@ import NavBar from "../components/NavBar";
 
 const ErrorPage = () => {
   const error = useRouteError();
+  console.log(error);
+
   return (
     <>
       <NavBar />
@@ -20,3 +22,4 @@ const ErrorPage = () => {
 };
 
 export default ErrorPage;
+
