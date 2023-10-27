@@ -1,4 +1,5 @@
 import { HStack, Image, useColorMode } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import logo from "../assets/game-icon.svg";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
@@ -15,7 +16,9 @@ const NavBar = () => {
       backgroundColor={colorMode == "dark" ? "gray.800" : "white"}
       top="0"
       left="0">
-      <Image src={logo} boxSize="60px" />
+      <Link to="/">
+        <Image src={logo} boxSize="60px" objectFit="cover" />
+      </Link>
       <SearchInput />
       <ColorModeSwitch />
     </HStack>
