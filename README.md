@@ -1,27 +1,24 @@
-# React + TypeScript + Vite
+# About the project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Game Hub lists all the latest games and allows you to **filter** and sort based on Platform, Genres, and Order.
 
-Currently, two official plugins are available:
+The game list (main page) has an **infinite scroll**, so you can scroll through until all games are fetched.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Also, you can **search** for the game of your choice through the search bar.
 
-## Expanding the ESLint configuration
+By selecting any game, you can see further **detailed info about the game**, including the trailer (if available) and photos of the game.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+There is a white and dark **theme** available for this site as well.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+# Based on
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### typed in `Typescript`
+### build using `react.js` + `vite`
+### published using `vercel`
+
+
+# Publish URL
+
+visit https://vivek-game-hub.vercel.app/
+
