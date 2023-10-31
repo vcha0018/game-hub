@@ -11,6 +11,9 @@ By selecting any game, you can see further **detailed info about the game**, inc
 There is a white and dark **theme** available for this site as well.
 
 
+*courtesy and thanks to [rawg API](https://rawg.io/apidocs)*
+
+
 # Based on
 
 ### typed in `Typescript`
@@ -20,5 +23,5 @@ There is a white and dark **theme** available for this site as well.
 
 # Publish URL
 
-visit https://vivek-game-hub.vercel.app/
+[visit the app](https://vivek-game-hub.vercel.app/)
 
