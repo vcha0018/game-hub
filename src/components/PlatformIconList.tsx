@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendoswitch } from "react-icons/si";
-import { Platform } from "../hooks/useGames";
+import Platform from "../entities/Platform";
 
 interface Props {
   platforms: Platform[];
@@ -31,7 +31,7 @@ const PlatformIconList = ({ platforms }: Props) => {
   };
   return (
     <HStack marginY={2}>
-      {platforms.map((platform) => (
+      {platforms?.map((platform) => (
         <Tooltip key={platform.id} label={platform.name} placement="bottom">
           <span>
             <Icon as={iconMap[platform.slug]} color={"gray.400"} />
