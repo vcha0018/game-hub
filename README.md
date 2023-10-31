@@ -12,7 +12,9 @@ There is a white and dark **theme** available for this site as well.
 
 _Note: This is only front-end project; game resources are fetched using the open-source RAWG API_
 
-*courtesy and thanks to [RAWG API](https://rawg.io/apidocs)*
+*courtesy and thanks to <a href="https://rawg.io/apidocs" target="_blank">RAWG API</a>*
+
+
 
 
 # Based on
@@ -24,5 +26,5 @@ _Note: This is only front-end project; game resources are fetched using the open
 
 # Publish URL
 
-[visit the app](https://vivek-game-hub.vercel.app/)
+<a href="https://vivek-game-hub.vercel.app/" target="_blank">visit the app</a>
 
